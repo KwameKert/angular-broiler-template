@@ -1,10 +1,31 @@
-<app-header ></app-header>
-<mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
-    <mat-drawer-content>Main content</mat-drawer-content>
+<app-header class="header"></app-header>
+<div class="" style="height: 50px; background-color:#3f51b5;">
+    <div class="row" style="z-index: 0;">
+        <div class="col-md-3 offset-md-3 ml-5 mt-2">
+            <p class="lead text-white">Dashboard</p>
+        </div>
+    </div>
+</div>
+<mat-drawer-container >
+    <mat-drawer mode="side" opened >
+        <app-sidebar></app-sidebar> 
+    </mat-drawer>
+    <mat-drawer-content><router-outlet></router-outlet></mat-drawer-content>
   </mat-drawer-container>
 
-<router-outlet></router-outlet>
+
+
+ <!-- <app-header (toggleSidebarForMe)="toggleSidebar($event)"></app-header>
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-sidebar> </app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>  -->
+
 
 <!-- 
 <app-header ></app-header> 
