@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes ,PreloadAllModules} from '@angular/router';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-
+import {DefaultComponent} from './layouts/default/default.component';
 
 const routes: Routes= [
 {
@@ -10,11 +10,17 @@ const routes: Routes= [
   loadChildren: () => import('./modules/authentication/authentication.module')
                      .then(m => m.AuthenticationModule)
 },
-{path: "**", redirectTo: "login"}
+
+{
+  path:'', 
+  component: DefaultComponent,
+  loadChildren: () => import('./modules/student/student.module')
+                     .then(m => m.StudentModule)
+},
+//{path: "**", redirectTo: "login"}
 ];
 
 @NgModule({
-  declarations: [],
   imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
