@@ -14,9 +14,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatCardModule} from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table'; 
-import { MatPaginatorModule } from '@angular/material/paginator';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
@@ -41,9 +38,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatButtonModule,
     MatListModule,
     MatSidenavModule,  
-    MatCardModule, 
-    MatTableModule, 
-    MatPaginatorModule
+  
     
   ],
   providers: [],
